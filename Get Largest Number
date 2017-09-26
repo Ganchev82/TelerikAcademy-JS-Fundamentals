@@ -1,0 +1,22 @@
+
+function solve(args){ 
+
+var input = args.split(' ');  
+a = +input[0]; 
+b = +input[1]; 
+c = +input[2];
+
+  function GetMax(aa, bb) {
+  if (aa>=bb) {
+  
+    return aa;  } 
+    
+    else{   
+    
+    return bb;  };
+ } 
+ 
+ if(GetMax(a,b)>=c) {
+  console.log(GetMax(a,b)); } else{
+  console.log(c); }   } 
+ 
