@@ -1,0 +1,17 @@
+function solve(args){
+
+ var N = +args[0];
+ var input = args[1].split(' ').map(Number); 
+ var counter = -1;  
+ 
+ for (var i = 1; i < N; i++) {
+ 
+     if (input[i-1]>input[i]) {
+      counter = i-1;      
+      break;     }     
+      
+     else{
+      continue;      }
+   }
+   
+ console.log(counter); } 
