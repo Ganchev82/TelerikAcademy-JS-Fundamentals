@@ -1,0 +1,42 @@
+
+function solve(args){ 
+
+  var N = +args[0]; 
+  var input = args[1].split(' ').map(Number); 
+  var minVal = Number.MAX_VALUE; 
+  var minValposition = 0;
+  var newArr = []; 
+  
+ for (var j = 0; j <N; j++) {
+
+    for (var i = 0; i < input.length; i++) {
+  
+      if (input[i]<input[i]+1) {
+      
+        if(input[i]<minVal){
+        
+            minVal = input[i];
+            minValposition = i;
+        }
+      }
+      
+      else{
+        
+        if(input[i+1]<minVal){
+          
+          minVal = input[i+1];
+          minValposition = i+1;
+        }
+      }  
+   }
+   
+  newArr.push(minVal); 
+  input.splice(minValposition,1);
+  minVal = Number.MAX_VALUE  
+  var minValposition = 0;  
+  
+ }
+ 
+  var last = newArr.join(' '); 
+  console.log(last);} 
+ 
